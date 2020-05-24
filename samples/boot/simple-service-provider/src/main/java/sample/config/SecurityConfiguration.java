@@ -57,7 +57,7 @@ public class SecurityConfiguration {
 			http
 				.antMatcher("/**")
 				.authorizeRequests()
-				.antMatchers("/**").authenticated()
+				.antMatchers("/**").permitAll()
 				.and()
 				.formLogin().loginPage("/saml/sp/select")
 			;
